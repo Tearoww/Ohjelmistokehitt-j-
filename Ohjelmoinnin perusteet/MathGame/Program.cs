@@ -6,6 +6,27 @@ namespace MathGame
     {
         private enum Menu { Exit, Sum, Subtraction, Multiplication, Division }
         private static int counter = 0, awards = 0;
+
+        /// <summary>
+        /// Parses user input into boolean
+        /// </summary>
+        /// <returns>A Valid boolean</returns>
+        private static bool ParseBoolean()
+        {
+            string input;
+            do
+            {
+                input = Console.ReadLine().ToLower();
+                if (input.Equals("k") || input.Equals("e"))
+                    break;
+                else
+                    Console.WriteLine("\nEt vastannut kysymykseen! Kirjoita \"K\" tai \"E\"?\n> ");
+            }while(true);
+            bool answer = false;
+            if (input == "k")
+                answer = true;
+            return answer;
+        }
         /// <summary>
         /// Asks the user which math operation they would like to exercise with or without negatives and/or decimals
         /// </summary>
@@ -13,7 +34,6 @@ namespace MathGame
         {
             bool isNumber = false, isAnswer = false, negativesAllowed = false, integersOnly = false;
             sbyte operation = 127;
-            string condition;
             
             if (counter == 0)
             {
@@ -64,58 +84,19 @@ namespace MathGame
                     return;
             }
 
-            Console.WriteLine("\nHaluatko harjoitella vain positiivisilla luvuilla? (K)yllä/(E)n?");
-            Console.Write("> ");
+            Console.Write("\nHaluatko harjoitella vain positiivisilla luvuilla? (K)yllä/(E)n?\n> ");
 
-            condition = Console.ReadLine();
+            isAnswer = ParseBoolean();
+            if(!isAnswer)
+                negativesAllowed = true;
+            
 
-            while (!isAnswer)
-            {
-                if (condition.Equals("K", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    negativesAllowed = false;
-                    isAnswer = true;
-                }
-                else if (condition.Equals("E", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    negativesAllowed = true;
-                    isAnswer = true;
-                }
-                else
-                {
-                    Console.WriteLine("\nEt vastannut kysymykseen! Kirjoita \"K\" tai \"E\"?");
+            Console.Write("\nHaluatko harjoitella vain tasaluvuilla? (K)yllä/(E)n?\n> ");
 
-                    condition = Console.ReadLine();
-                }
-            }
+            isAnswer = ParseBoolean();
+            if(isAnswer)
+                integersOnly = true;
 
-            isAnswer = false;
-
-            Console.WriteLine("\nHaluatko harjoitella vain tasaluvuilla? (K)yllä/(E)n?");
-            Console.Write("> ");
-
-            condition = Console.ReadLine();
-
-            while (!isAnswer)
-            {
-                if (condition.Equals("K", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    integersOnly = true;
-                    isAnswer = true;
-                }
-                else if (condition.Equals("E", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    integersOnly = false;
-                    isAnswer = true;
-                }
-                else
-                {
-                    Console.WriteLine("\nEt vastannut kysymykseen! Kirjoita \"K\" tai \"E\"!");
-                    Console.Write("> ");
-
-                    condition = Console.ReadLine();
-                }
-            }
 
             counter++;
 
