@@ -27,11 +27,39 @@ namespace DiceSum
             return sum;
         }
         /// <summary>
-        /// Prints the sum of two dice to the user
+        /// Asks the user for number of throws and prints their sum
         /// </summary>
         private static void PrintSum()
         {
-            Console.WriteLine(RollDice() + RollDice());
+            byte numberOfThrows = 0;
+            bool isNumber = false;
+
+            Console.Write("Hei! Kuinka monta kertaa haluat heittää viittä noppaa?: ");
+
+            while (!isNumber)
+            {
+                try
+                {
+                    numberOfThrows = byte.Parse(Console.ReadLine());
+
+                    isNumber = true;
+                }
+                catch (FormatException)
+                {
+                    Console.Write("\nAnna määrä NUMERONA: ");
+                }
+                catch (OverflowException)
+                {
+                    Console.Write("\nAnna jokin sopivampi luku: ");
+                }
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < numberOfThrows; i++)
+            {
+                Console.WriteLine(RollDice() + RollDice());
+            }
         }
         static void Main(string[] args)
         {
