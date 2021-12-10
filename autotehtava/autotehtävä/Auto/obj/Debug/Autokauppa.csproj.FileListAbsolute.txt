@@ -1,0 +1,9 @@
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\obj\Debug\Autokauppa.csproj.AssemblyReference.cache
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\obj\Debug\Autokauppa.view.MainMenu.resources
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\obj\Debug\Autokauppa.csproj.GenerateResource.cache
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\obj\Debug\Autokauppa.csproj.CoreCompileInputs.cache
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\bin\Debug\Autokauppa.exe.config
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\bin\Debug\Autokauppa.exe
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\bin\Debug\Autokauppa.pdb
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\obj\Debug\Autokauppa.exe
+C:\Users\Iida\Downloads\autotehtävä\autotehtävä\Auto\obj\Debug\Autokauppa.pdb
