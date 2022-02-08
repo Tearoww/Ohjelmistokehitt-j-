@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Raffle", "Raffle.csproj", "{715A73E3-E1C1-438E-AD6B-BC0E35F5BB53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{715A73E3-E1C1-438E-AD6B-BC0E35F5BB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715A73E3-E1C1-438E-AD6B-BC0E35F5BB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715A73E3-E1C1-438E-AD6B-BC0E35F5BB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715A73E3-E1C1-438E-AD6B-BC0E35F5BB53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4516DA3-1EA9-42C3-8CF8-49D86BC66EC8}
+	EndGlobalSection
+EndGlobal
